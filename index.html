@@ -1,26 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   
-  <script>
-  const getMeta = async () => {
-    const response = await fetch('http://159.203.27.227:8000/stream')
-    const meta = await response.json()
-
-    // console.log("all meta ->", meta)
-
-    const div = document.getElementById("display-meta")
-
-    if(meta.icestats.source){
-      div.innerHTML = meta.icestats.source.title
-    }
-
-  }
-
-  setInterval(getMeta, 1000)
-
-  getMeta()
-
-</script>
 
 <head>
 
@@ -39,7 +19,26 @@
 </head>
 
 <body>
+<script>
+  const getMeta = async () => {
+    const response = await fetch('http://159.203.27.227:8000/status-json.xsl')
+    const meta = await response.json()
 
+    // console.log("all meta ->", meta)
+
+    const div = document.getElementById("display-meta")
+
+    if(meta.icestats.source){
+      div.innerHTML = meta.icestats.source.title
+    }
+
+  }
+
+  setInterval(getMeta, 1000)
+
+  getMeta()
+
+</script>
 
   <div class="container">
     <div class="row">
@@ -51,9 +50,14 @@
     </div>
     <div class="row">
       <div class="col-lg-12 text-center">
-           <audio src="http://159.203.27.227:8000/stream" controls autoplay></audio>
+<audio controls="true" autoplay="true" preload="none">
+  <source src="http://159.203.27.227:8000/stream?type=.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
         
+<br />
 
+Now Playing:  <span id="display-meta"> </span>
 
     </div>
 
@@ -72,12 +76,3 @@
 
 
 
-<!-- START OF THE RADIO HTML5 PLAYER EMBEDDING -->
-<audio controls="true" autoplay="true" preload="none">
-  <source src="http://161.35.160.85:8000/stream?type=.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-</audio>
-
-<br />
-
-Now Playing:  <span id="display-meta"> </span>
