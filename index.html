@@ -10,10 +10,11 @@
     <title>rapture network</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../../../../dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- <link href="../../../../dist/css/bootstrap.min.css" rel="stylesheet"> -->
 
     <!-- Custom styles for this template -->
-    <link href="style.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
 
@@ -32,7 +33,6 @@
 
 a = document.getElementById('link');
 a.setAttribute("href", ("https://duckduckgo.com/?q=!ducky+"+meta.icestats.source.title));
-
 
       }
     }
@@ -87,11 +87,6 @@ a.setAttribute("href", ("https://duckduckgo.com/?q=!ducky+"+meta.icestats.source
 
         <div class="player">
 
-        <!-- <audio controls="true" autoplay="true" preload="none">
-          <source src="http://159.203.27.227:8000/stream?type=.mp3" type="audio/mp3">
-            your browser does not support the audio element
-        </audio> -->
-
         <audio id="player" src=http://159.203.27.227:8000/stream?" type=.mp3" autoplay="true">your browser does not support the audio element</audio>
 <div>
   <button onclick="document.getElementById('player').play()">play</button>
@@ -99,7 +94,6 @@ a.setAttribute("href", ("https://duckduckgo.com/?q=!ducky+"+meta.icestats.source
   <button onclick="document.getElementById('player').volume += 0.1">vol +</button>
   <button onclick="document.getElementById('player').volume -= 0.1">vol -</button>
 </div>
-
 
 
         <p id='nowplaying'>
