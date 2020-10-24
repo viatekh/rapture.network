@@ -1,8 +1,30 @@
-/* @font-face {
-  font-family: myFirstFont;
-  src: url(Telegraphem.otf);
+body {
+}
+/* .maincontent {
+  padding: 3rem 1.5rem;
+  text-align: center;
+} */
+
+main {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  font-family: 'Syne Mono', monospace;
+
 }
 
-h1,h2 {
-  font-family: myFirstFont;
+/* h1 {
+  font-family: 'Syne Mono', monospace;
 } */
+
+#logo{
+  padding-top:2%;
+}
+
+
+p {
+  padding-top: 2%;
+}
+
+.player {
+  padding-top: 2%;
+}
